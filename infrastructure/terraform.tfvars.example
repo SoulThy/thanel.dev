@@ -1,0 +1,6 @@
+domain_name       = "example.com"
+project_name      = "example-blog"
+
+# Go in your Github repository, Settings -> Actions -> OIDC -> Default subject claim prefix
+github_oidc_subject_claim_prefix = "repo:owner_name@owner_id/repo_name@repo_id"
+

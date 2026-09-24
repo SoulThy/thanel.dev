@@ -1,0 +1,12 @@
+# S3 bucket name in AWS to maintain the Terraform state
+# This bucket has to be created manually
+bucket       = "thanel-dev-blog-terraform-state-bucket"
+
+# Path inside the bucket where the state file is saved
+key          = "blog/terraform.tfstate"
+
+# AWS region where the S3 state bucket is located
+region       = "eu-north-1"
+
+# Enables native S3 state locking without needing a DynamoDB table
+use_lockfile = true

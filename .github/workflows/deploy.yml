@@ -5,9 +5,10 @@ on:
     branches: [main]
 
 env:
-  BUCKET_NAME: "thanel-dev-site"
+  BUCKET_NAME: "thanel-dev-blog-bucket"
   AWS_REGION: "eu-north-1"
   DISTRIBUTION_ID: "E17MEWX0D97KUE"
+  GITHUB_ACTIONS_ROLE_ARN: "arn:aws:iam::275459308866:role/thanel-dev-blog-github-actions-deploy-role"
 
 permissions:
   id-token: write
@@ -32,7 +33,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:
-          role-to-assume: arn:aws:iam::275459308866:role/thanel-dev-github-actions-deploy-role
+          role-to-assume: ${{ GITHUB_ACTIONS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync files to S3
