@@ -5,6 +5,8 @@ public/
 *.tfstate
 *.tfstate.*
 terraform.tfvars
+*.auto.tfvars
+backend.hcl
 crash.log
 override.tf
 override.tf.json
