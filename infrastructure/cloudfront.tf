@@ -26,6 +26,11 @@ resource "aws_cloudfront_distribution" "blog" {
     viewer_protocol_policy = "redirect-to-https"
     cache_policy_id        = "658327ea-f89d-4fab-a63d-7e88639e58f6"
     compress               = true
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.index_rewrite.arn
+    }
   }
 
   restrictions {
@@ -40,4 +45,28 @@ resource "aws_cloudfront_distribution" "blog" {
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
   }
+}
+
+# This lets us keep OAC in S3 and block public access while
+# mantaining the following path resolution in cloudfront:
+# /blog or /blog/ gives us -> /blog/index.html
+resource "aws_cloudfront_function" "index_rewrite" {
+  name    = "index-rewrite-${var.project_name}"
+  runtime = "cloudfront-js-2.0"
+  publish = true
+
+  code = <<-EOT
+  function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+
+    if (uri.endsWith('/')) {
+      request.uri += 'index.html';
+    } else if (!uri.split('/').pop().includes('.')) {
+      request.uri += '/index.html';
+    }
+
+    return request;
+  }
+  EOT
 }
