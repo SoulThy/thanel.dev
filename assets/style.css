@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
+
 h1,
 h2,
 h3,
 h4,
 h5 {
   color: #ddd;
-  font-family: "Verdana", sans-serif;
+  font-family: "Google Sans Code", sans-serif;
 }
 
 b,
@@ -18,7 +20,7 @@ a {
 
 html {
   color: #ccc;
-  font-family: "Georgia", serif;
+  font-family: "Google Sans Code", serif;
   font-size: 1.2em;
   display: flex;
   flex-direction: row;

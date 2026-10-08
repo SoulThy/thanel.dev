@@ -1,0 +1,11 @@
+---
+.title = "microblog - 2026",
+.date = .date("2026-10-08T00:00:00"),
+.layout = "microblog.shtml",
+---
+[]($section.id('about'))
+
+Here you can find a list of random things that came to my mind and wanted to share.
+
+## [climbing is addictive]($section.id("2026-10-08T00:00:00"))
+Recently i began climbing, and was wondering whats so addictive of this sport to me? ... #TODO

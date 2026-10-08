@@ -1,12 +1,7 @@
 ---
-.title = "Devlog Archive",
-.date = .date("1990-01-01T00:00:00"),
-.layout = "devlog-archive.shtml",
-.alternatives = [.{
-    .name = "rss",
-    .layout = "devlog.xml",
-    .output = "index.xml",
-}],
+.title = "Microblog Archive",
+.date = .date("2026-10-08T00:00:00"),
+.layout = "microblog-archive.shtml",
 ---
 
 This page lists all the devlog years that are present on this site.
@@ -26,5 +21,3 @@ by year is a good default option.
 When rotating a devlog all you have to do is create a new page with a newer
 date set in the frontmatter `date` field, and update the page description to let
 people know that this page is not the current year's devlog anymore.
-
-The latest devlog year is also available [via RSS feed]($link.alternative('rss')).
