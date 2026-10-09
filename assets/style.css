@@ -22,9 +22,6 @@ a h1, a h2, a h3, a h4, a h5 {
     color: inherit;
 }
 
-a .site-title {
-    color: var(--text-heading);
-}
 
 b,
 strong {
@@ -35,7 +32,12 @@ a {
   color: var(--text-link);
 }
 
-a:hover {
+a .site-title {
+    color: var(--text-heading);
+}
+
+a:hover,
+a:hover .site-title {
     color: var(--text-link-hover);
 }
 
