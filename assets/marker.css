@@ -1,0 +1,24 @@
+.marker {
+    position: relative;
+    display: inline-block;
+    /* i default it to red so i can see i forgot to specify the color */
+    --marker-color: red;
+    color: var(--bg-color) !important;
+    z-index: 1;
+}
+
+.marker::before {
+    content: "";
+    position: absolute;
+    inset: -0.1em -0.2em;
+    z-index: -1;
+    background: var(--marker-color);
+    border-radius: 20px 225px 15px 255px / 255px 15px 225px 15px;
+    opacity: 0.9;
+    rotate: -1deg; 
+}
+
+.marker-ambra { --marker-color: #ff9f43}
+.marker-yellow { --marker-color: #ffea00}
+.marker-green { --marker-color: #55efc4}
+.marker-pink { --marker-color: #ff7675}

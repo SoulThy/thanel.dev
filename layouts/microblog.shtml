@@ -33,7 +33,7 @@
 	</style>
 </head>
 <body id="body">
-	<h1 class="title" :text="$page.date.format('2006').prefix('thoughts of ')"></h1>
+	<h1 class="title" :text="$page.date.format('2006').prefix('└> thoughts of ')"></h1>
 	<div :html="$page.contentSection('about')"></div>
 	<div class="feed" :loop="$page.contentSections().slice(1)">
 		<div id="$loop.it.id">

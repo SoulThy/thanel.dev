@@ -4,6 +4,6 @@
 .layout = "index.shtml",
 ---
 
-Hi, i'm thanel, a guy passionate about computers, infrastructures, and everything that contains a **flow of electrons** basically :)
+Hi, i'm thanel, a guy passionate about computers, infrastructures, and everything that contains a [flow of electrons]($text.attrs('marker','marker-ambra')) basically :)
 
 The site is in progress of development (and probably will be until i die), currently i share my passions and thoughts in my [short form blogging](/microblog/2026) section.
