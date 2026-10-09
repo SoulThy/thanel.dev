@@ -11,12 +11,10 @@
 	</style>
 </head>
 <body id="body">
-	<h1 :text="$page.title"></h1>
+	<h1 class="title" :text="$page.title.prefix('└> ')"></h1>
 	<div :html="$page.content()"></div>
 	<div>
-		<h2>Past years</h2>
 		<div :loop="$page.subpages()">
-			<span class="date" :text="$loop.it.date.format('Year 2006')"></span>
 			<a class="title" href="$loop.it.link()">
 				<h3 :text="$loop.it.title"></h3>
 			</a>

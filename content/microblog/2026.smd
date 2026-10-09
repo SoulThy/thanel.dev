@@ -1,0 +1,16 @@
+---
+.title = "microblog - 2026",
+.date = .date("2026-10-09T00:00:00"),
+.layout = "microblog.shtml",
+---
+[]($section.id('about'))
+
+Here you can find a list of random things that came to my mind and wanted to share.
+
+## [climbing is addictive]($section.id("2026-10-08T00:00:00"))
+Recently i began climbing, and while reading [Hooked by Nir Eyal](https://www.goodreads.com/book/show/22668729-hooked) i had a fun time trying to analyze why i feel so addicted to climbing since i started practicing it. What is the [[*trigger* -> *action* -> *variable reward* -> *investment*]]($text.attrs('marker','marker-ambra')) loop in this case that makes my brain crave climbing so bad?
+
+- **trigger**: I start thinking of climbing when i want to disconnect and "relax", and when this happens the main trigger is "i could have finished that route" or "i know i can do better".
+- **action**: Well it's just climbing!
+- **variable reward**: Closing a problem (which refers to completing a climb correctly) it's extremely rewarding, but yes, it is also variable: only if you are good you will get the reward! In addition, completing the same route will result in different dopamine hits each time, perhaps i may not be proud of my form.
+- **investment**: As i said, you have to be good to finish harder routes, and how do you become good? By investing a lot of time into practice. Notice how we want to get the reward by climbing, and climbing is itself the investment, whether we fail or we succeed. Do you see the loop??
