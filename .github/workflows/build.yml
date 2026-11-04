@@ -1,0 +1,21 @@
+name: Build Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Zine
+        uses: kristoff-it/setup-zine@v1
+        with:
+          version: v0.14.0
+
+      - name: Build site
+        run: zine release
